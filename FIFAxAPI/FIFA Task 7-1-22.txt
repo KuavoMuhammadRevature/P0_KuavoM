@@ -1,0 +1,101 @@
+			7/1/2022 Task //!project1//
+2. A new API - assessment - to complete api development experience
+
+create an Excel spreadsheet for the teams/countries/urls
+
+create a new API for FIFA <FIFAxAPI>
+
+You need to have 2 tables
+
+--Teams Table Columns--
+teamId (primary key) identity not null
+teamName (unique key) not nullcountry not null
+teamFlag() varchar(1000)--optional
+teamJerseyUrl() varchar(1000)--optional
+teamLogoUrl() varchar(1000)--optional
+have atleast 32 teams (all 32)
+
+------------For URLS------------
+google search team> flag >right click>copy link>paste on excel workbook
+google search team> logo >right click>copy link>paste on excel workbook
+google search team> jersey >right click>copy link>paste on excel workbook
+
+Who are the teams in the 2022 FIFA World Cup?
+These are the 32 nations playing in Qatar, sorted by group:
+
+Group A:
+Qatar
+Netherlands
+Senegal
+Ecuador
+
+Group B:
+England
+USA
+Wales
+Iran
+
+Group C:
+Argentina
+Poland
+Mexico
+Saudi Arabia
+
+Group D:
+France
+Austria
+Tunisia
+Australia
+
+Group E:
+Germany
+Spain
+Japan
+Costa Rica
+
+Group F:
+Belgium
+Croatia
+Canada
+Morocco
+
+Group G:
+Brazil
+Switzerland
+Serbia
+Cameroon
+
+Group H: Portugal , Uruguay , Ghana ,South Korea
+			
+--Players Table Columns--
+playerId (primary key) not null
+playerName (unique key) not null
+playerPosition 
+playerTeamId (Foreign Key) not null
+playerImageUrl varchar(1000)--optional
+------------For URLS------------
+google search player> image >right click>copy link>paste on excel workbook
+
+Have atlease 10 players in every team
+11 * 32 = 352 players + 5 fields of playerInfo per Player 
+	----------------------------------------------------------------------------------------
+Create 2 controllers and below methods	
+---teamsController Methods---All-CRUD---
+a. ShowAllTeams()
+b. GetTeamByName (this will reaturn, the whole team, team name and players) eg, Spain, TeamId, TeamName, Country PlayerId PlayerName PlayerPosition
+c. AddNewTeam()
+------------------------------------------------
+---playersController Methods---All-CRUD---
+1. GetPlayerByName()
+(this will return TeamId TeamName Country PlayerId PlayerName PlayerPosition)
+
+2. GetAllPlayersByPosition(positionName)
+
+					TeamId TeamName Country PlayerId PlayerName PlayerPosition
+
+				c. AddNewPlayer
+
+				d. UpdatePlayer (move the player to other team)
+
+				e. Deleteplayer
+
